@@ -59,6 +59,21 @@
         1. repository url을 상대방에게 제공
         2. 상대방의 email을 이용하여 초대 보내기
         3. 상대방의 승인
-    
+    - gitignore
+        - Git에서 특정 파일이나 디렉토리를 추적하기 않기 위해 사용
+        - 한번에 여러 파일이나 디렉토리를 처리할 수 있음
+        - `touch .gitignore` 하면 됨
+        - `.gitignore` 이름으로 만들어야함.
+            - 얘는 확장자가 없음
+            - **git init 하기전에 미리 만들어야함!**
+                
+                방법은 있는데.. 귀찮고 권장하지 않음
 
+                (git rm--cashed 같은 방법을 써야함)
+            - gitignore 목록 생성 서비스
+                - https://www.toptal.com/developers/gitignore/ 추천
+                - Ex) Windows, Mac, Python를 쳐보면 알 수 있음
+                - 나오는 내용을 전부 복사해서 .gitignore 파일에 넣으면 됨
+
+- **TIL(Today I Learned)**        
 
