@@ -59,21 +59,31 @@
         1. repository url을 상대방에게 제공
         2. 상대방의 email을 이용하여 초대 보내기
         3. 상대방의 승인
-    - gitignore
-        - Git에서 특정 파일이나 디렉토리를 추적하기 않기 위해 사용
-        - 한번에 여러 파일이나 디렉토리를 처리할 수 있음
-        - `touch .gitignore` 하면 됨
-        - `.gitignore` 이름으로 만들어야함.
-            - 얘는 확장자가 없음
-            - **git init 하기전에 미리 만들어야함!**
-                
-                방법은 있는데.. 귀찮고 권장하지 않음
+- **gitignore**
+    - Git에서 특정 파일이나 디렉토리를 추적하기 않기 위해 사용
+    - 한번에 여러 파일이나 디렉토리를 처리할 수 있음
+    - `touch .gitignore` 하면 됨
+    - `.gitignore` 이름으로 만들어야함.
+        - 얘는 확장자가 없음
+        - **git init 하기전에 미리 만들어야함!**
+            
+            방법은 있는데.. 귀찮고 권장하지 않음
 
-                (git rm--cashed 같은 방법을 써야함)
-            - gitignore 목록 생성 서비스
-                - https://www.toptal.com/developers/gitignore/ 추천
-                - Ex\) Windows, Mac, Python를 쳐보면 알 수 있음
-                - 나오는 내용을 전부 복사해서 .gitignore 파일에 넣으면 됨
+            (git rm--cashed 같은 방법을 써야함)
+        - gitignore 목록 생성 서비스
+            - https://www.toptal.com/developers/gitignore/ 추천
+            - Ex\) Windows, Mac, Python를 쳐보면 알 수 있음
+            - 나오는 내용을 전부 복사해서 .gitignore 파일에 넣으면 됨
+- `git remote rm 원격_저장소_이름`
+    - 현재 로컬 저장소에 등록된 원격 저장소 삭제
+    - 원격 저장소 자체가 사라지는것이 아님. 연결이 끊기는 것
+- `git revert commit_아이디`
+    - 재설정
+    - 단일 commit을 실행 취소 하는 것
+    - 프로젝트 기록에서 commit을 없었던 일로 처리 후 그 결과를 새로운 commit으로 추가함
+
+- **GitHub Profile 꾸미기**
+    - 알아서 구글링
 
 - **TIL(Today I Learned)**        
 
