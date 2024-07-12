@@ -72,13 +72,13 @@
                 (git rm--cashed 같은 방법을 써야함)
             - gitignore 목록 생성 서비스
                 - https://www.toptal.com/developers/gitignore/ 추천
-                - Ex) Windows, Mac, Python를 쳐보면 알 수 있음
+                - Ex\) Windows, Mac, Python를 쳐보면 알 수 있음
                 - 나오는 내용을 전부 복사해서 .gitignore 파일에 넣으면 됨
 
 - **TIL(Today I Learned)**        
 
 - **문서화 연습의 중요성**
-    - https://d2.naver.com/news/3435170 (참조)
+    - https://d2.naver.com/news/3435170 (refered from)
 
     - 개인적으로는 아래와 같이 개발자의 수준을 분류하고 싶습니다.
 
@@ -96,5 +96,8 @@
 
         레벨4:
         개발도구의 문제를 소스 코드를 수정해서 Fork/패치해서 사용할 수 있음
-        
+
         신입사원이라도 레벨2 정도는 함께 일할 개발자에게 기대를 하게 됩니다.
+
+    - git 공식문서: https://git-scm.com/doc
+    
