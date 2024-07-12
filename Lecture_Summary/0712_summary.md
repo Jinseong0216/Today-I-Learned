@@ -72,15 +72,51 @@
             (git rm--cashed 같은 방법을 써야함)
         - gitignore 목록 생성 서비스
             - https://www.toptal.com/developers/gitignore/ 추천
-            - Ex\) Windows, Mac, Python를 쳐보면 알 수 있음
+            - Ex. Windows, Mac, Python를 쳐보면 알 수 있음
             - 나오는 내용을 전부 복사해서 .gitignore 파일에 넣으면 됨
 - `git remote rm 원격_저장소_이름`
     - 현재 로컬 저장소에 등록된 원격 저장소 삭제
     - 원격 저장소 자체가 사라지는것이 아님. 연결이 끊기는 것
-- `git revert commit_아이디`
+- `git revert commit_해시번호` (해시번호 앞에 4자리만 사용해도 됨)
     - 재설정
     - 단일 commit을 실행 취소 하는 것
     - 프로젝트 기록에서 commit을 없었던 일로 처리 후 그 결과를 새로운 commit으로 추가함
+    
+        이후, 해당 commit에 넣고자 하는 메세지를 입력하도록 vim편집기가 실행됨
+    - 변경 사항을 안전하게 실행 취소 할 수 있도록 도와주는 순방향 실행 취소 작업
+    - commit 기록에서 commit을 삭제하거나 분리하는 대신, 지정된 변경 사항을 반전시키는 새 commit을 생성
+    - git에서 기록이 손실되는 것을 방지하여 기록의 무결성과 협업의 신뢰성을 높임
+        
+        즉, second commit에서 2.txt를 commit했는데 이를 취소해버리면
+        
+        commit된 2.txt는 사라지고 Revert second commit이 생기면서, commit된 2.txt파일이 사라짐
+    - revert 추가 명령어는 찾아보기
+
+- `git reset commit_해시번호` (해시번호 앞에 4자리만 사용해도 됨)
+    - 되돌리기
+    - 시계를 마치 과거로 돌리는 듯한 행위
+    - 특정 commit으로 되돌아 갔을 때, 되돌아간 commit 이후의 commit은 모두 삭제
+    - 아주 위험한 행위
+    
+    - Options
+        - --soft
+            -삭제된 commit의 기록을 staging area에 남김
+        - --mixed
+            - 삭제된 commit의 기록을 working directory에 남김(디폴트 값)
+        - --hard
+            - 삭제된 commit의 기록을 남기지 않음
+        - --reflog
+            - HEAD가 이전에 가리켰던 모든 commit을 보여줌
+            - reset의 --hard 옵션을 통해 지워진 commit도 조회하여 복구 가능
+- `git restore` 
+    - Modified 상태의 파일 되돌리기 (Working Directory에서 적용되는 함수임)
+    - Working Directory에서 파일을 수정한 뒤, 파일의 수정 사항을 취소하고, 원래 모습대로 되돌리는 작업
+    - Ex. `git restore README.md`
+
+- `git rm --cached` or `git restore --staged`
+    - Staging Area에 올라칸 파일을 Unstage 하기
+    - rm은 git 저장소에 commit이 존재하지 않는 경우 사용
+    - restore는 git 저장소에 commit이 존재하는 경우 사용
 
 - **GitHub Profile 꾸미기**
     - 알아서 구글링
